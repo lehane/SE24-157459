@@ -24,7 +24,14 @@ ex: la pomme est rouge et la banane est jaune
 
  */
 
-// const countWords ...
+const countWords = (sentence) => {
+  return sentence.split(' ').reduce((acc, word) => {
+    acc[word] = acc[word] ? acc[word] + 1 : 1;
+    return acc;
+  }, {});
+};
+
+//console.log(countWords("la pomme est rouge et la banane est jaune"));
 
 /**
 Exercice : Trier un objet par valeur
@@ -51,7 +58,15 @@ exemple:
 
 */
 
-// const sortObjectByValue ...
+const sortObjectByValue = (obj) => {
+  return Object.entries(obj)
+    .sort((a, b) => a[1] - b[1])
+    .reduce((acc, [key, value]) => {
+      acc[key] = value;
+      return acc;
+    }, {});
+}
 
 
+// console.log(sortObjectByValue({pommes: 3, bananes: 1, cerises: 8}));
 module.exports = {countWords, sortObjectByValue};

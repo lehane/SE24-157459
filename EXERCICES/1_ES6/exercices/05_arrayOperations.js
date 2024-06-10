@@ -10,7 +10,7 @@
  * 
   */
 
-// const multiplyByTwo ...
+const multiplyByTwo = (arr) => arr.map((value) => value * 2);
 
 
 
@@ -24,7 +24,7 @@
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
-// const filterNameStartByA ...
+const filterNameStartByA = (arr) => arr.filter((value) => value[0] === 'A');
 
 
 /**
@@ -38,7 +38,7 @@
   */
 
 
-// const sum ...
+const sum = (arr) => arr.reduce((acc, value) => acc + value, 0);
 
 /**
  * Utiliser la fonction .find sur le tableau passé en paramètre
@@ -59,7 +59,7 @@
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
-// const findUserById ...
+const findUserById = (arr, id) => arr.find((value) => value.id === id).name;
 
 
 module.exports = {multiplyByTwo, filterNameStartByA, sum, findUserById};
